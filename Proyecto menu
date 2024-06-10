@@ -1,0 +1,477 @@
+CLASE MAIN
+public class Ensalada{
+  String base, proteina, leguminosa, aderezo, verdura, cereal,topping;
+    int sel_base, sel_prot, sel_leg, sel_ade, sel_ver, sel_cer, sel_top;
+    public String Tomar_Orden(){
+      System.out.println("-----------------------------------------");
+      System.out.println("SELECCIONA LOS INGREDIENTES PARA TU ENSALADA");
+      System.out.println("-----------------------------------------\n");
+      do{
+        System.out.println("BASE\n");
+          sel_base=Integer.parseInt(System.console().readLine("1.-LECHUGA ROMANA\n2.-LECHUGA OREJONA\nELIGE LA BASE DE TU AGRADO: "));
+        if(sel_base==1){
+          this.base="LECHUGA ROMANA";
+        System.console().readLine("HAS ELEGIDO LA LECHUGA ROMANA\n");
+        }
+        else if(sel_base==2){
+          this.base="LECHUGA OREJONA";
+        System.console().readLine("HAS ELEGIDO LA LECHUGA OREJONA\n");
+      }
+        else{
+          System.out.println("INGRESA UNA OPCION VALIDA");
+        }
+
+
+    }while(sel_base!=1 && sel_base!=2);
+      do{
+          System.out.println("PROTEINA\n");
+            sel_prot=Integer.parseInt(System.console().readLine("1.-POLLO\n2.-ATUN\nELIGE LA PROTEINA DE TU AGRADO: "));
+          if(sel_prot==1){
+            this.proteina="POLLO";
+          System.console().readLine("HAS ELEGIDO EL POLLO\n");
+          }
+          else if(sel_prot==2){
+            this.proteina="ATUN";
+            System.console().readLine("HAS ELEGIDO EL ATUN\n");
+        }
+          else{
+            System.out.println("INGRESA UNA OPCION VALIDA");
+          }
+
+
+      }while(sel_prot!=1 && sel_prot!=2);
+      do{
+          System.out.println("LEGUMINOSA\n");
+            sel_leg=Integer.parseInt(System.console().readLine("1.-CACAHUATES\n2.-TAMARINDO\nELIGE LA LEGUMINOSA DE TU AGRADO: "));
+          if(sel_leg==1){
+            this.leguminosa="CACAHUATES";
+          System.console().readLine("HAS ELEGIDO CACAHUATES\n");
+          }
+          else if(sel_leg==2){
+            this.leguminosa="TAMARINDO";
+          System.console().readLine("HAS ELEGIDO TAMARINDO\n");
+        }
+          else{
+            System.out.println("INGRESA UNA OPCION VALIDA");
+          }
+
+
+      }while(sel_leg!=1 && sel_leg!=2);
+      do{
+          System.out.println("ADEREZO\n");
+            sel_ade=Integer.parseInt(System.console().readLine("1.-RANCH\n2.-MIEL\nELIGE EL ADEREZO DE TU AGRADO: "));
+          if(sel_ade==1){
+            this.aderezo="RANCH";
+            System.console().readLine("HAS ELEGIDO RANCH\n");
+          }
+          else if(sel_ade==2){
+            this.aderezo="MIEL";
+            System.console().readLine("HAS ELEGIDO MIEL\n");
+        }
+          else{
+            System.out.println("INGRESA UNA OPCION VALIDA");
+          }
+
+
+      }while(sel_ade!=1 && sel_ade!=2);
+      do{
+          System.out.println("VERDURA\n");
+            sel_ver=Integer.parseInt(System.console().readLine("1.-JITOMATE\n2.-ZANAHORA\nELIGE LA VERDURA DE TU AGRADO: "));
+          if(sel_ver==1){
+            this.verdura="JITOMATE";
+            System.console().readLine("HAS ELEGIDO EL JITOMATE\n");
+          }
+          else if(sel_ver==2){
+            this.verdura="ZANAHORIA";
+            System.console().readLine("HAS ELEGIDO LA ZANAHORIA\n");
+        }
+          else{
+            System.out.println("INGRESA UNA OPCION VALIDA");
+          }
+
+
+      }while(sel_ver!=1 && sel_ver!=2);
+      do{
+          System.out.println("CEREAL\n");
+            sel_cer=Integer.parseInt(System.console().readLine("1.-ARROZ\n2.-AVENA\nELIGE EL CEREAL DE TU AGRADO: "));
+          if(sel_cer==1){
+            this.cereal="ARROZ";
+            System.console().readLine("HAS ELEGIDO ARROZ\n");
+          }
+          else if(sel_cer==2){
+            this.cereal="AVENA";
+            System.console().readLine("HAS ELEGIDO AVENA\n");
+        }
+          else{
+            System.out.println("INGRESA UNA OPCION VALIDA");
+          }
+
+
+      }while(sel_cer!=1 && sel_cer!=2);
+      do{
+          System.out.println("TOPPING\n");
+            sel_top=Integer.parseInt(System.console().readLine("1.-ARANDANO\n2.-GRANOLA\nELIGE EL TOPPING DE TU AGRADO: "));
+          if(sel_top==1){
+            this.topping="ARANDANO";
+            System.console().readLine("HAS ELEGIDO ARANDANO\n");
+          }
+          else if(sel_top==2){
+            this.topping="GRANOLA";
+            System.console().readLine("HAS ELEGIDO GRANOLA\n");
+        }
+          else{
+            System.out.println("INGRESA UNA OPCION VALIDA");
+          }
+
+
+      }while(sel_top!=1 && sel_top!=2);
+      return "SE GUARDO TU ORDEN";
+  }
+  public String Preparar(){
+    String ade, topi;
+    int A, T;
+    System.out.println("----------------------------------");
+      System.out.println("\nPREPARA TU ENSALADA\n");
+     System.out.println("----------------------------------");
+    do{
+      A=Integer.parseInt(System.console().readLine("DESEAS QUE TU ADAREZO VAYA\nARRIBA(1)\nREVUELTO(2)\nELIGE UNA OPCION: "));
+      if(A==1){
+        ade="ARRIBA";
+      }else if(A==2){
+        ade="REVUELTO";
+      }else{   
+        System.out.println("INGRESA UNA OPCION VALIDA");
+      }
+    }while(A!=1 && A!=2);
+    do{
+      T=Integer.parseInt(System.console().readLine("DESEAS QUE TU TOPPING VAYA\nARRIBA(1)\nREVUELTO(2)\nELIGE UNA OPCION: "));
+      if(T==1){
+        topi="ARRIBA";
+      }else if(T==2){
+        topi="REVUELTO";
+      }else{   
+        System.out.println("INGRESA UNA OPCION VALIDA");
+      }
+    }while(T!=1 && T!=2);
+    return "TU ENSALADA SE ESTA PREPARANDO";
+  }
+  public String Imprimir_Orden(){
+    System.out.println("\nTU ORDEN ES: \n"+this.verdura+"\n"+this.cereal+"\n"+this.topping+"\n"+this.aderezo+"\n"+this.topping);
+    return "DISFRUTA TU ENSALADA :)";
+  }
+ }
+
+ CLASE TACO
+
+ public class Taco{
+  String tortilla, carne, verdura, salsa, queso, complementos, cant_tor;
+  int sel_tor, sel_car, sel_ver, sel_sal, sel_que, sel_com, sel_cant;
+  public String Tomar_Orden(){
+    System.out.println("-----------------------------------------");
+    System.out.println("SELECCIONA LOS INGREDIENTES PARA TUS TACOS");
+    System.out.println("-----------------------------------------\n");
+    do{
+        System.out.println("TORTILLA");
+          sel_tor=Integer.parseInt(System.console().readLine("1.-HARINA\n2.-MAIZ\nELIGE EL TIPO DE TORTILLA DE TU AGRADO: "));
+        if(sel_tor==1){
+          this.tortilla="HARINA";
+        System.console().readLine("HAS ELEGIDO TORTILLA DE HARINA\n");
+        }
+        else if(sel_tor==2){
+          this.tortilla="MAIZ";
+        System.console().readLine("HAS ELEGIDO TORTILLA DE MAIZ\n");
+      }
+        else{
+          System.out.println("INGRESA UNA OPCION VALIDA");
+        }
+
+
+    }while(sel_tor!=1 && sel_tor!=2);
+   do{
+        System.out.println("CARNE");
+          sel_car=Integer.parseInt(System.console().readLine("1.-AL PASTOR\n2.-ARABE\nELIGE EL TIPO DE CARNE DE TU AGRADO : "));
+        if(sel_car==1){
+          this.carne="AL PASTOR";
+        System.console().readLine("HAS ELEGIDO CARNE AL PASTOR\n");
+        }
+        else if(sel_car==2){
+          this.carne="ARABE";
+        System.console().readLine("HAS ELEGIDO CARNE ARABE\n");
+      }
+        else{
+          System.out.println("INGRESA UNA OPCION VALIDA");
+        }
+
+
+    }while(sel_car!=1 && sel_car!=2);
+        do{
+            System.out.println("VERDURA");
+              sel_ver=Integer.parseInt(System.console().readLine("1.-CEBOLLA\n2.-CILANTRO\nELIGE LA VERDURA DE TU AGRADO: "));
+            if(sel_ver==1){
+              this.verdura="CEBOLLA";
+            System.console().readLine("HAS ELEGIDO CEBOLLA\n");
+            }
+            else if(sel_ver==2){
+              this.verdura="CILANTRO";
+            System.console().readLine("HAS ELEGIDO CILANTRO\n");
+          }
+            else{
+              System.out.println("INGRESA UNA OPCION VALIDA");
+            }
+
+
+        }while(sel_ver!=1 && sel_ver!=2);
+            do{
+            System.out.println("SALSA");
+              sel_sal=Integer.parseInt(System.console().readLine("1.-SALSA VERDE\n2.-SALSA ROJA\nELIGE LA SALSA DE TU AGRADO: "));
+            if(sel_sal==1){
+              this.salsa="VERDE";
+            System.console().readLine("HAS ELEGIDO LA SALSA VERDE\n");
+            }
+            else if(sel_sal==2){
+              this.salsa="ROJA";
+            System.console().readLine("HAS ELEGIDO LA SALSA ROJA\n");
+          }
+            else{
+              System.out.println("INGRESA UNA OPCION VALIDA");
+            }
+
+
+        }while(sel_sal!=1 && sel_sal!=2);
+    do{
+        System.out.println("QUESO");
+          sel_que=Integer.parseInt(System.console().readLine("1.-QUESO OXACA\n2.-QUESO PANELA\nELIGE EL TIPO DE QUESO DE TU AGRADO: "));
+        if(sel_que==1){
+          this.queso="OXACA";
+        System.console().readLine("HAS ELEGIDO QUESO OXACA\n");
+        }
+        else if(sel_que==2){
+          this.queso="PANELA";
+        System.console().readLine("HAS ELEGIDO QUESO PANELA\n");
+      }
+        else{
+          System.out.println("INGRESA UNA OPCION VALIDA");
+        }
+
+
+    }while(sel_que!=1 && sel_que!=2);
+    do{
+        System.out.println("COMPLEMENTOS");
+          sel_com=Integer.parseInt(System.console().readLine("1.-PIÑA\n2.-LIMÓN\nELIGE EL COMPLEMENTO DE TU AGRADO: "));
+        if(sel_com==1){
+          this.complementos="PIÑA";
+        System.console().readLine("HAS ELEGIDO LA PIÑA\n");
+        }
+        else if(sel_com==2){
+          this.complementos="LIMON";
+        System.console().readLine("HAS ELEGIDO EL LIMÓN\n");
+      }
+        else{
+          System.out.println("INGRESA UNA OPCION VALIDA");
+        }
+
+
+    }while(sel_com!=1 && sel_com!=2);
+    do{
+        System.out.println("CANTIDAD DE TORTILLAS");
+          sel_cant=Integer.parseInt(System.console().readLine("1.-UNA\n2.-DOS\n3.-TRES\nELIGE UNA OPCIÓN: "));
+        if(sel_cant==1){
+          this.cant_tor="UNA";
+         System.console().readLine("HAS ELEGIDO UNA TORTILLA\n");
+        }
+        else if(sel_cant==2){
+          this.cant_tor="DOS";
+        System.console().readLine("HAS ELEGIDO DOS TORTILLAS\n");
+      }else if(sel_cant==3){
+         this.cant_tor="TRES";
+        System.console().readLine("HAS ELEGIDO TRES TORTILLAS");
+      }
+        else{
+          System.out.println("INGRESA UNA OPCION VALIDA");
+        }
+
+
+    }while(sel_cant!=1 && sel_cant!=2);
+    return "TU ORDEN A SIDO REGISTRADA";
+    }
+  public String Preparar(){
+    System.out.println("---------------------------------");
+    System.out.println("A PREPARAR TU ORDEN!");
+    System.out.println("---------------------------------");
+    System.out.println("LA TORTILLA SE HA COLOCADO");
+    System.out.println("LOS INGREDIENTES SE ESTAN COLOCANDO");
+    return "TU ORDEN YA ESTA LISTA PARA SER ENTREGADA!!";  
+  }
+  public String  Imprimir_Orden(){
+    System.out.println("---------------------------------");
+    System.out.println("A PREPARAR TU ORDEN!");
+    System.out.println("---------------------------------");
+   System.out.println("TU ORDEN FUERON TACOS CON CARNE "+this.carne+" CON TORTILLA DE "+this.tortilla+" CON LA VERDURA "+this.verdura+" CON SALSA "+this.salsa+" CON QUESO "+this.queso+" CON COMPLEMENTO "+this.complementos+" Y CON LA CANTIDAD DE "+this.cant_tor+" TORTILLAS");
+    return "\nQUE DISFRUTES TUS TACOS!! ;)";
+  }
+  
+  
+  }
+
+CLASE ENSALADA
+public class Ensalada{
+  String base, proteina, leguminosa, aderezo, verdura, cereal,topping;
+    int sel_base, sel_prot, sel_leg, sel_ade, sel_ver, sel_cer, sel_top;
+    public String Tomar_Orden(){
+      System.out.println("-----------------------------------------");
+      System.out.println("SELECCIONA LOS INGREDIENTES PARA TU ENSALADA");
+      System.out.println("-----------------------------------------\n");
+      do{
+        System.out.println("BASE\n");
+          sel_base=Integer.parseInt(System.console().readLine("1.-LECHUGA ROMANA\n2.-LECHUGA OREJONA\nELIGE LA BASE DE TU AGRADO: "));
+        if(sel_base==1){
+          this.base="LECHUGA ROMANA";
+        System.console().readLine("HAS ELEGIDO LA LECHUGA ROMANA\n");
+        }
+        else if(sel_base==2){
+          this.base="LECHUGA OREJONA";
+        System.console().readLine("HAS ELEGIDO LA LECHUGA OREJONA\n");
+      }
+        else{
+          System.out.println("INGRESA UNA OPCION VALIDA");
+        }
+
+
+    }while(sel_base!=1 && sel_base!=2);
+      do{
+          System.out.println("PROTEINA\n");
+            sel_prot=Integer.parseInt(System.console().readLine("1.-POLLO\n2.-ATUN\nELIGE LA PROTEINA DE TU AGRADO: "));
+          if(sel_prot==1){
+            this.proteina="POLLO";
+          System.console().readLine("HAS ELEGIDO EL POLLO\n");
+          }
+          else if(sel_prot==2){
+            this.proteina="ATUN";
+            System.console().readLine("HAS ELEGIDO EL ATUN\n");
+        }
+          else{
+            System.out.println("INGRESA UNA OPCION VALIDA");
+          }
+
+
+      }while(sel_prot!=1 && sel_prot!=2);
+      do{
+          System.out.println("LEGUMINOSA\n");
+            sel_leg=Integer.parseInt(System.console().readLine("1.-CACAHUATES\n2.-TAMARINDO\nELIGE LA LEGUMINOSA DE TU AGRADO: "));
+          if(sel_leg==1){
+            this.leguminosa="CACAHUATES";
+          System.console().readLine("HAS ELEGIDO CACAHUATES\n");
+          }
+          else if(sel_leg==2){
+            this.leguminosa="TAMARINDO";
+          System.console().readLine("HAS ELEGIDO TAMARINDO\n");
+        }
+          else{
+            System.out.println("INGRESA UNA OPCION VALIDA");
+          }
+
+
+      }while(sel_leg!=1 && sel_leg!=2);
+      do{
+          System.out.println("ADEREZO\n");
+            sel_ade=Integer.parseInt(System.console().readLine("1.-RANCH\n2.-MIEL\nELIGE EL ADEREZO DE TU AGRADO: "));
+          if(sel_ade==1){
+            this.aderezo="RANCH";
+            System.console().readLine("HAS ELEGIDO RANCH\n");
+          }
+          else if(sel_ade==2){
+            this.aderezo="MIEL";
+            System.console().readLine("HAS ELEGIDO MIEL\n");
+        }
+          else{
+            System.out.println("INGRESA UNA OPCION VALIDA");
+          }
+
+
+      }while(sel_ade!=1 && sel_ade!=2);
+      do{
+          System.out.println("VERDURA\n");
+            sel_ver=Integer.parseInt(System.console().readLine("1.-JITOMATE\n2.-ZANAHORA\nELIGE LA VERDURA DE TU AGRADO: "));
+          if(sel_ver==1){
+            this.verdura="JITOMATE";
+            System.console().readLine("HAS ELEGIDO EL JITOMATE\n");
+          }
+          else if(sel_ver==2){
+            this.verdura="ZANAHORIA";
+            System.console().readLine("HAS ELEGIDO LA ZANAHORIA\n");
+        }
+          else{
+            System.out.println("INGRESA UNA OPCION VALIDA");
+          }
+
+
+      }while(sel_ver!=1 && sel_ver!=2);
+      do{
+          System.out.println("CEREAL\n");
+            sel_cer=Integer.parseInt(System.console().readLine("1.-ARROZ\n2.-AVENA\nELIGE EL CEREAL DE TU AGRADO: "));
+          if(sel_cer==1){
+            this.cereal="ARROZ";
+            System.console().readLine("HAS ELEGIDO ARROZ\n");
+          }
+          else if(sel_cer==2){
+            this.cereal="AVENA";
+            System.console().readLine("HAS ELEGIDO AVENA\n");
+        }
+          else{
+            System.out.println("INGRESA UNA OPCION VALIDA");
+          }
+
+
+      }while(sel_cer!=1 && sel_cer!=2);
+      do{
+          System.out.println("TOPPING\n");
+            sel_top=Integer.parseInt(System.console().readLine("1.-ARANDANO\n2.-GRANOLA\nELIGE EL TOPPING DE TU AGRADO: "));
+          if(sel_top==1){
+            this.topping="ARANDANO";
+            System.console().readLine("HAS ELEGIDO ARANDANO\n");
+          }
+          else if(sel_top==2){
+            this.topping="GRANOLA";
+            System.console().readLine("HAS ELEGIDO GRANOLA\n");
+        }
+          else{
+            System.out.println("INGRESA UNA OPCION VALIDA");
+          }
+
+
+      }while(sel_top!=1 && sel_top!=2);
+      return "SE GUARDO TU ORDEN";
+  }
+  public String Preparar(){
+    String ade, topi;
+    int A, T;
+    System.out.println("----------------------------------");
+      System.out.println("\nPREPARA TU ENSALADA\n");
+     System.out.println("----------------------------------");
+    do{
+      A=Integer.parseInt(System.console().readLine("DESEAS QUE TU ADAREZO VAYA\nARRIBA(1)\nREVUELTO(2)\nELIGE UNA OPCION: "));
+      if(A==1){
+        ade="ARRIBA";
+      }else if(A==2){
+        ade="REVUELTO";
+      }else{   
+        System.out.println("INGRESA UNA OPCION VALIDA");
+      }
+    }while(A!=1 && A!=2);
+    do{
+      T=Integer.parseInt(System.console().readLine("DESEAS QUE TU TOPPING VAYA\nARRIBA(1)\nREVUELTO(2)\nELIGE UNA OPCION: "));
+      if(T==1){
+        topi="ARRIBA";
+      }else if(T==2){
+        topi="REVUELTO";
+      }else{   
+        System.out.println("INGRESA UNA OPCION VALIDA");
+      }
+    }while(T!=1 && T!=2);
+    return "TU ENSALADA SE ESTA PREPARANDO";
+  }
+  public String Imprimir_Orden(){
+    System.out.println("\nTU ORDEN ES: \n"+this.verdura+"\n"+this.cereal+"\n"+this.topping+"\n"+this.aderezo+"\n"+this.topping);
+    return "DISFRUTA TU ENSALADA :)";
+  }
+ }
